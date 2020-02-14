@@ -1,5 +1,5 @@
 export default {
   port: process.env.PORT || 5000,
-  dbURL: 'mongodb+srv://danil:373442@cluster0-hzaci.azure.mongodb.net/test?retryWrites=true&w=majority',
+  dbURL: 'mongodb://localhost:27017',
   secret: 'SECRET_KEY'
 }

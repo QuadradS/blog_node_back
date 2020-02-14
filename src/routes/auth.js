@@ -2,6 +2,7 @@ import router from './post'
 import { userModel } from '../models/User'
 import jwt from 'jsonwebtoken'
 import config from '../config'
+import checkToken from '../middlewares/checkToken'
 
 router.post('/signup', async (req, res, next) => {
   const { login, name, password } = req.body
@@ -16,12 +17,8 @@ router.post('/signup', async (req, res, next) => {
 router.post('/signin', async (req, res, next) => {
   const { login, password } = req.body
   const user = await userModel.findOne({ login })
-
   if (!user) {
-    return next({
-      status: 400,
-      message: 'user not found'
-    })
+    return res.status(400).send({ message: 'user nor found' })
   }
 
   try {
@@ -35,6 +32,16 @@ router.post('/signin', async (req, res, next) => {
 
   const token = jwt.sign({ _id: user._id }, config.secret)
   res.json({ token })
+})
+
+router.post('/checkToken', checkToken, async (req, res, next) => {
+  const { _id } = req.token
+  const user = await userModel.findOne({ _id })
+  if (!user) {
+    return res.status(400).send({ message: 'user not auth' })
+  }
+
+  res.status(200).json({ message: 'Success' })
 })
 
 export default router
