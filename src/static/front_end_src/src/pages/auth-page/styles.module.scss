@@ -1,0 +1,25 @@
+.input{
+  width: 300px;
+  margin: 15px auto;
+  display: block;
+}
+
+.button{
+  width: 300px;
+  margin: 15px auto;
+  display: block;
+}
+
+.auth_container{
+  max-width: 400px;
+  padding: 20px;
+  margin: auto;
+  border: 1px solid #d1cdc7;
+  border-radius: 5px;
+}
+
+.auth_wrap{
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+}

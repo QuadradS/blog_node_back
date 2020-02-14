@@ -1,0 +1,26 @@
+.comments{
+  width: 100%;
+
+  &_block{
+    display: flex;
+    & input{
+      width: calc(100% - 120px);
+      margin: auto;
+    }
+    & button{
+      width: 100px;
+      margin-left: auto;
+    }
+  }
+
+  &_list{
+    width: 100%;
+    margin: 20px 0;
+
+    &_item{
+      width: 100%;
+      margin: 10px;
+
+    }
+  }
+}

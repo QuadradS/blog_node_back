@@ -1,0 +1,28 @@
+@import "../../styles/variables";
+
+.post {
+  width: 100%;
+  border: 1px solid $border-color;
+  border-radius: 5px;
+
+  &_title {
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px;
+    background: $blue;
+    color: $white;
+  }
+
+  &_text {
+    display: block;
+    font-size: 16px;
+    padding: 10px;
+    text-decoration: none;
+  }
+
+  & img {
+    display: block;
+    margin: auto;
+    width: 100%;
+  }
+}

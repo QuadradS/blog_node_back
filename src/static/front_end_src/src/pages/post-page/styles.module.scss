@@ -1,0 +1,10 @@
+.post_page{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+
+  &_item{
+    width: 30%;
+    margin: 1.5%;
+  }
+}

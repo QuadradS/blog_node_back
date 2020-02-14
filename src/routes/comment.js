@@ -18,8 +18,6 @@ router.post('/create/:postID', checkToken, async function (req, res) {
   const postID = req.params.postID
   const { author, text, authorID } = req.body
 
-  console.log('author, text, authorID ',author, text, authorID)
-
   const commentObj = {
     author, text, postID, authorID
   }

@@ -1,0 +1,15 @@
+@import "../../../styles/variables";
+
+.button{
+  border: 1px solid $border-color;
+  cursor: pointer;
+  color: $white;
+  background: $green;
+  border-radius: 5px;
+  padding: 8px;
+  box-sizing: border-box;
+
+  &:disabled{
+    background: $border-color!important;
+  }
+}

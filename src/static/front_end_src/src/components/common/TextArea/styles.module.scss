@@ -1,0 +1,13 @@
+@import "../../../styles/variables";
+
+
+.textarea{
+  border: 1px solid $border-color;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 8px;
+  display: block;
+  background: none;
+  min-height: 50px;
+  display: block;
+}
